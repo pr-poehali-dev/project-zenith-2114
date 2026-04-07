@@ -1,5 +1,6 @@
 import { Navbar } from "@/components/Navbar"
 import { Hero7 } from "@/components/Hero7"
+import { Features } from "@/components/Features"
 
 const Index = () => {
   return (
@@ -19,7 +20,7 @@ const Index = () => {
           <Hero7
             heading="Первая работа — большой шаг. Мы поможем его сделать правильно."
             description="Платформа объявлений о работе для подростков от 14 лет. Безопасные вакансии, советы для родителей и всё необходимое для работодателей — в одном месте."
-            button={{ text: "Смотреть вакансии", url: "#" }}
+            button={{ text: "Смотреть вакансии", url: "#teens" }}
             reviews={{
               count: 1200,
               rating: 4.9,
@@ -32,6 +33,7 @@ const Index = () => {
               ],
             }}
           />
+          <Features />
         </main>
       </div>
     </div>
