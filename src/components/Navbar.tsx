@@ -22,6 +22,11 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
+          <img
+            src="https://cdn.poehali.dev/projects/8b593b2b-7bf3-4015-bc88-1df90c31c557/bucket/902c298b-e283-43a7-af8e-29ef716b06d9.jpg"
+            alt="РаботаЮнымВСК"
+            className="h-10 w-10 rounded-lg object-cover"
+          />
           <span className="text-2xl font-bold font-heading text-gray-900">РаботаЮнымВСК</span>
         </Link>
 
