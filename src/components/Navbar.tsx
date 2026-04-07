@@ -7,7 +7,7 @@ export function Navbar() {
       <div className="mx-auto flex max-w-7xl items-center justify-between">
         {/* Logo */}
         <Link to="/" className="text-2xl font-bold font-heading text-gray-900 hover:text-indigo-600 transition-colors">
-          РаботаЮным
+          РаботаЮнымВСК
         </Link>
 
         {/* Nav links */}
