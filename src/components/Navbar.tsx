@@ -39,10 +39,7 @@ export function Navbar() {
           {navLink("/articles", "Статьи")}
         </div>
 
-        {/* CTA Button */}
-        <Button size="lg" className="hover:bg-indigo-700 text-white bg-slate-900" asChild>
-          <Link to="/vacancies">Смотреть вакансии</Link>
-        </Button>
+
       </div>
     </nav>
   )
