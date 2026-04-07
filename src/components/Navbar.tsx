@@ -20,6 +20,7 @@ export function Navbar() {
           <a href="#teens" className="hover:text-indigo-600 transition-colors">Подросткам</a>
           <a href="#parents" className="hover:text-indigo-600 transition-colors">Родителям</a>
           <a href="#employers" className="hover:text-indigo-600 transition-colors">Работодателям</a>
+          <Link to="/vacancies" className="hover:text-indigo-600 transition-colors">Вакансии</Link>
           <Link to="/articles" className="hover:text-indigo-600 transition-colors">Статьи</Link>
         </div>
 
