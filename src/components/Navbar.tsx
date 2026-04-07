@@ -23,7 +23,7 @@ export function Navbar() {
         {/* Logo */}
         <Link to="/" className="flex items-center gap-2 hover:opacity-80 transition-opacity">
           <img
-            src="https://cdn.poehali.dev/projects/8b593b2b-7bf3-4015-bc88-1df90c31c557/files/95596a3c-91f7-4b48-bc0c-dd9207a799f1.jpg"
+            src="https://cdn.poehali.dev/projects/8b593b2b-7bf3-4015-bc88-1df90c31c557/files/60b1114f-83fb-4beb-a853-ab565422c471.jpg"
             alt="РаботаЮнымВСК"
             className="h-9 w-9 rounded-lg object-cover"
           />
