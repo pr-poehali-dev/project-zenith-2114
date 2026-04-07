@@ -114,15 +114,7 @@ const Hero7 = ({
               </Avatar>
             ))}
           </span>
-          <div>
-            <div className="flex items-center gap-1">
-              {[...Array(5)].map((_, index) => (
-                <Icon key={index} name="Star" className="size-5 fill-yellow-400 text-yellow-400" />
-              ))}
-              <span className="mr-1 font-semibold">{reviews.rating?.toFixed(1)}</span>
-            </div>
-            <p className="text-muted-foreground text-left font-medium">{reviews.count}+ участников</p>
-          </div>
+          <p className="text-muted-foreground font-medium">{reviews.count}+ участников</p>
         </motion.div>
       </div>
     </section>
