@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import { motion } from "framer-motion"
 import Icon from "@/components/ui/icon"
 
@@ -159,6 +160,15 @@ export function Features() {
                 <p className="text-gray-600 text-xs leading-relaxed">{item.description}</p>
               </div>
             ))}
+          </div>
+          <div className="mt-6 flex justify-end">
+            <Link
+              to="/articles"
+              className="inline-flex items-center gap-1.5 text-sm font-semibold text-indigo-600 hover:text-indigo-800 transition-colors"
+            >
+              Читать подробные статьи
+              <Icon name="ArrowRight" size={16} />
+            </Link>
           </div>
         </motion.div>
 
