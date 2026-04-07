@@ -97,25 +97,7 @@ const Hero7 = ({
             <a href={button.url}>{button.text}</a>
           </Button>
         </motion.div>
-        <motion.div
-          className="mx-auto mt-10 flex w-fit flex-col items-center gap-4 sm:flex-row"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{
-            duration: 0.8,
-            ease: "easeOut",
-            delay: 0.8,
-          }}
-        >
-          <span className="mx-4 inline-flex items-center -space-x-4">
-            {reviews.avatars.map((avatar, index) => (
-              <Avatar key={index} className="size-14 border">
-                <AvatarImage src={avatar.src || "/placeholder.svg"} alt={avatar.alt} />
-              </Avatar>
-            ))}
-          </span>
-          <p className="text-muted-foreground font-medium">{reviews.count}+ участников</p>
-        </motion.div>
+
       </div>
     </section>
   )
