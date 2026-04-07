@@ -60,7 +60,7 @@ const Hero7 = ({
       <div className="container text-center">
         <div className="mx-auto flex max-w-5xl flex-col gap-6">
           <motion.h1
-            className="text-3xl font-extrabold lg:text-6xl font-heading text-balance"
+            className="text-3xl font-extrabold lg:text-6xl font-heading whitespace-nowrap"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{
