@@ -1,7 +1,22 @@
-import { Link } from "react-router-dom"
+import { Link, useLocation } from "react-router-dom"
 import { Button } from "@/components/ui/button"
 
 export function Navbar() {
+  const { pathname } = useLocation()
+
+  const navLink = (to: string, label: string) => (
+    <Link
+      to={to}
+      className={`relative transition-colors text-sm font-medium pb-0.5 ${
+        pathname === to
+          ? "text-indigo-600 after:absolute after:bottom-0 after:left-0 after:w-full after:h-0.5 after:bg-indigo-600 after:rounded-full"
+          : "text-gray-700 hover:text-indigo-600"
+      }`}
+    >
+      {label}
+    </Link>
+  )
+
   return (
     <nav className="relative z-10 w-full px-6 py-4">
       <div className="mx-auto flex max-w-7xl items-center justify-between">
@@ -20,8 +35,8 @@ export function Navbar() {
           <a href="#teens" className="hover:text-indigo-600 transition-colors">Подросткам</a>
           <a href="#parents" className="hover:text-indigo-600 transition-colors">Родителям</a>
           <a href="#employers" className="hover:text-indigo-600 transition-colors">Работодателям</a>
-          <Link to="/vacancies" className="hover:text-indigo-600 transition-colors">Вакансии</Link>
-          <Link to="/articles" className="hover:text-indigo-600 transition-colors">Статьи</Link>
+          {navLink("/vacancies", "Вакансии")}
+          {navLink("/articles", "Статьи")}
         </div>
 
         {/* CTA Button */}
