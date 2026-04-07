@@ -40,6 +40,37 @@ const features = [
   },
 ]
 
+const knowledgeItems = [
+  {
+    icon: "BookOpen",
+    title: "Трудовой договор обязателен",
+    description: "С подростком от 14 лет можно заключить трудовой договор только с письменного согласия родителя или опекуна. Без этого документа работа незаконна.",
+    iconColor: "text-indigo-600",
+    bg: "bg-indigo-50",
+  },
+  {
+    icon: "Clock",
+    title: "Ограничения по рабочему времени",
+    description: "14–15 лет — не более 4 часов в день, 16–17 лет — не более 7 часов. В учебный период нормы сокращаются вдвое. Ночные смены запрещены.",
+    iconColor: "text-amber-600",
+    bg: "bg-amber-50",
+  },
+  {
+    icon: "ShieldCheck",
+    title: "Медосмотр перед трудоустройством",
+    description: "Работодатель обязан направить несовершеннолетнего на предварительный медицинский осмотр за свой счёт — это требование ТК РФ.",
+    iconColor: "text-emerald-600",
+    bg: "bg-emerald-50",
+  },
+  {
+    icon: "Scale",
+    title: "Запрещённые виды работ",
+    description: "Нельзя привлекать подростков к тяжёлому физическому труду, работе с вредными веществами, в ночных заведениях и к переноске тяжестей сверх нормы.",
+    iconColor: "text-rose-600",
+    bg: "bg-rose-50",
+  },
+]
+
 const cardVariants = {
   hidden: { opacity: 0, y: 30 },
   visible: (i: number) => ({
@@ -102,6 +133,35 @@ export function Features() {
             </motion.div>
           ))}
         </div>
+
+        {/* 4th block — full width */}
+        <motion.div
+          id="knowledge"
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.7, ease: "easeOut", delay: 0.5 }}
+          className="mt-6 rounded-2xl border border-slate-200 bg-slate-50 p-8"
+        >
+          <div className="flex items-center gap-3 mb-6">
+            <div className="w-12 h-12 rounded-xl flex items-center justify-center bg-slate-200">
+              <Icon name="Info" size={24} className="text-slate-700" />
+            </div>
+            <div>
+              <p className="text-xs font-semibold uppercase tracking-wider text-slate-500 mb-0.5">Важно знать</p>
+              <h3 className="text-xl font-bold text-gray-900">Работа для подростков: что нужно знать родителям и работодателям</h3>
+            </div>
+          </div>
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4">
+            {knowledgeItems.map((item) => (
+              <div key={item.title} className={`rounded-xl p-5 flex flex-col gap-3 ${item.bg}`}>
+                <Icon name={item.icon} size={22} className={item.iconColor} />
+                <p className="font-semibold text-gray-900 text-sm">{item.title}</p>
+                <p className="text-gray-600 text-xs leading-relaxed">{item.description}</p>
+              </div>
+            ))}
+          </div>
+        </motion.div>
+
       </div>
     </section>
   )
