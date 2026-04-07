@@ -1,8 +1,8 @@
-import { Star } from "lucide-react"
 import { motion } from "framer-motion"
 
 import { Avatar, AvatarImage } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
+import Icon from "@/components/ui/icon"
 
 interface Hero7Props {
   heading?: string
@@ -117,11 +117,11 @@ const Hero7 = ({
           <div>
             <div className="flex items-center gap-1">
               {[...Array(5)].map((_, index) => (
-                <Star key={index} className="size-5 fill-yellow-400 text-yellow-400" />
+                <Icon key={index} name="Star" className="size-5 fill-yellow-400 text-yellow-400" />
               ))}
               <span className="mr-1 font-semibold">{reviews.rating?.toFixed(1)}</span>
             </div>
-            <p className="text-muted-foreground text-left font-medium">{reviews.count}+ отзывов</p>
+            <p className="text-muted-foreground text-left font-medium">{reviews.count}+ участников</p>
           </div>
         </motion.div>
       </div>
